@@ -17,7 +17,7 @@ if [[ -f /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]; then
 fi
 
 # Prompt
-export PS1="%F{blue}%n@pop%f %F{blue}%~%f\$ "
+export PS1="%F{blue}%n@$HOST%f %F{blue}%~%f\$ "
 
 # Go
 export PATH="$PATH:/usr/local/go/bin:$HOME/go/bin"
