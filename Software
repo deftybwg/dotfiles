@@ -1,0 +1,41 @@
+## software I like
+protonvpn
+transmission
+
+firefox
+VMware Workstation
+Burp Suite
+discord
+
+Fcitx 5 - for japanese 
+Mozc - for japanese
+mpv for media?
+
+fcc-claude
+
+## terminal software
+
+ghostty or kitty?
+yazi - file explorer via the terminal
+nvim
+tmux
+lazygit ?
+spotify_player - play spotify from term
+
+## nvim plugins
+
+Telescope - interface u can search to navigate to different files
+yazi-nvim - use a yazi fe IN vim
+something for a fuzzy find?
+
+
+## fonts
+Iosevka Term looks nice
+
+
+download jetsbrains.ttf file and or install
+this is a must 4 yazi, it should bring file icons, colors etc.
+
+sudo apt install fonts-jetbrains-mono
+sudo pacman -S ttf-jetbrains-mono-nerd
+
