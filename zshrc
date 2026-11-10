@@ -1,4 +1,4 @@
-# Oh My Zsh
+# Oh My Zsh for both root & ur main user
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="bira"
 plugins=(git)
@@ -31,15 +31,19 @@ autoload -Uz compinit && compinit
 setopt HIST_FIND_NO_DUPS
 setopt HIST_IGNORE_ALL_DUPS
 
-# Custom tools
-export PATH="$PATH:$HOME/Utils/hakrawler"
-export PATH="$PATH:$HOME/.local/bin"
-export PATH="$HOME/Utils/john/run:$PATH"
+# Path to tools (shared between users) 
+export PATH="/opt/Utils/hakrawler:$PATH"
+export PATH="/opt/Utils/john/run:$PATH"
+export PATH="/opt/Utils:$PATH"
 
-alias john="$HOME/Utils/john/run/john"
+alias john="/opt/Utils/john/run/john"
+
+# User-local tools
+export PATH="$PATH:$HOME/.local/bin"
 
 # NVM
 export NVM_DIR="$HOME/.nvm"
 
 [ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && source "$NVM_DIR/bash_completion"
+
