@@ -22,6 +22,31 @@ require("lazy").setup({
     end,
   },
   {
+    "lervag/vimtex",
+    lazy = false,
+
+    init = function()
+      -- PDF viewer
+      vim.g.vimtex_view_method = "zathura"
+
+      -- Compiler
+      vim.g.vimtex_compiler_method = "latexmk"
+
+      -- Use PDF output
+      vim.g.vimtex_compiler_latexmk = {
+        out_dir = "build",
+        options = {
+          "-pdf",
+          "-interaction=nonstopmode",
+          "-synctex=1",
+        },
+      }
+
+      -- Quickfix settings
+      vim.g.vimtex_quickfix_mode = 0
+    end,
+  },
+  {
     "mikavilpas/yazi.nvim",
     event = "VeryLazy",
     dependencies = { "nvim-lua/plenary.nvim" },
@@ -33,6 +58,7 @@ require("lazy").setup({
       -- open yazi when you launch nvim on a directory instead of netrw
       open_for_directories = false,
     },
+  },
   {
     "nvim-treesitter/nvim-treesitter",
     branch = "main",
@@ -44,6 +70,5 @@ require("lazy").setup({
       "lua", "vim", "vimdoc", "bash",
     })
   end,
-  },
   },
 })
