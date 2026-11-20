@@ -32,11 +32,7 @@ setopt HIST_FIND_NO_DUPS
 setopt HIST_IGNORE_ALL_DUPS
 
 # Path to tools (shared between users) 
-export PATH="/opt/Utils/hakrawler:$PATH"
-export PATH="/opt/Utils/john/run:$PATH"
 export PATH="/opt/Utils:$PATH"
-
-alias john="/opt/Utils/john/run/john"
 
 # User-local tools
 export PATH="$PATH:$HOME/.local/bin"
