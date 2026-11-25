@@ -40,3 +40,6 @@ export PATH="$PATH:$HOME/.local/bin"
 
 [ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && source "$NVM_DIR/bash_completion"
+
+#coloring
+export TERM=xterm-256color
