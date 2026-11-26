@@ -125,4 +125,12 @@ export PATH="$PATH:/home/benxo/Utils/hakrawler"
 export PATH="$PATH:/home/benxo/.local/bin"
 export PATH="$HOME/Utils/john/run:$PATH"
 alias john="/home/benxo/Utils/john/run/john"
-alias pentest='docker run -it --rm --network host -v /home/benxo/Utils:/home/benxo/Utils pentest'
+alias john="/home/benxo/Utils/john/run/john"
+
+pentest() {
+  docker start pentest >/dev/null 2>&1 || \
+    docker run -d --name pentest --network host \
+      -v /home/benxo/Utils:/home/benxo/Utils \
+      --entrypoint sleep pentest infinity
+  docker exec -it pentest zsh
+}
